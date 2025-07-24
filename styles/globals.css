@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html {
+    background-color: rgb(243, 244, 246);
+    font-family: Vazirmatn!important;
+}
+
+@layer components {
+    .font-fa {
+        font-family: Vazirmatn!important;
+    }
+
+    .btn-flex {
+        @apply flex justify-center items-center gap-2;
+    }
+}
+
+.rtl {
+    direction: rtl!important;
+}
+
+.font-fa {
+    font-family: Vazirmatn!important;
+}
+.movement-animation{
+    animation: movement 4s ease-in-out infinite;
+}
+.vertical-movement{
+    animation: vertical 4s ease-in infinite;
+}
+@keyframes movement {
+    0%, 100%{ transform: rotate(-3deg) translate(3px) }
+    50%{ transform: rotate(3deg) translate(-3px) }
+}
+@keyframes vertical {
+    0%, 100%{ transform: translateY(3px)}
+    50%{ transform: translateY(-3px)}
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(147, 149, 232, 0.492);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(99,102,241);
+    border-radius: 3px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: rgba(68, 68, 135, 0.25) 0px 30px 60px -12px inset, rgba(33, 33, 33, 0.3) 0px 18px 36px -18px inset;;
+}
